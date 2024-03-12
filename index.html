@@ -6,17 +6,16 @@
     <title>Página HTML com JavaScript</title>
     <!-- adicionando script js-->
     <script>
-        alert("Olá JavaScript");
+      
     </script>
     <script src="meuscript.js"></script>
 </head>
 <body>
     <h1>Página HTML com JavaScript</h1>
     
-    <button onclick="OlaJavaScript()">
-        <img src="Icones/Icon2.png" alt="Ícone"></button>
-    <button onclick="MostraVariaveis()"><img src="Icones/Icon3.png" alt="Ícone"></button>
-    <hr/>
+      
+        <p><a href="formulario.html"><img src="Icones/Icon2.png" alt="Ícone"></button></a> Formulario</p>
+       <hr/>
     <title>Calculadora Simples</title>
     <style>
         .calculator {
@@ -54,21 +53,5 @@
         <button onclick="calculateResult()">=</button>
         <button onclick="appendToDisplay('/')">/</button>
     </div>
-
-    <script>
-        function appendToDisplay(value) {
-            document.getElementById('display').value += value;
-        }
-
-        function clearDisplay() {
-            document.getElementById('display').value = '';
-        }
-
-        function calculateResult() {
-            var displayValue = document.getElementById('display').value;
-            var result = eval(displayValue);
-            document.getElementById('display').value = result;
-        }
-    </script>
 </body>
 </html>
