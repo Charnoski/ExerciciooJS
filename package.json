@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "electron": "^29.1.0",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "name": "exjavascript01",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FabianoCharnoski",
+  "license": "ISC",
+  "description": ""
+}
