@@ -1,32 +1,18 @@
-function appendToDisplay(value) {
-    document.getElementById('display').value += value;
-}
-
-function clearDisplay() {
-    document.getElementById('display').value = '';
-}
-
-function calculateResult() {
-    var displayValue = document.getElementById('display').value;
-    var result = eval(displayValue);
-    document.getElementById('display').value = result;
-}
 function inverterNomes() {
-    var nomes = [];
-    nomes.push(document.getElementById("nome1").value);
-    nomes.push(document.getElementById("nome2").value);
-    nomes.push(document.getElementById("nome3").value);
-    nomes.push(document.getElementById("nome4").value);
-    nomes.push(document.getElementById("nome5").value);
+    const form = document.getElementById('form');
+    const nomes = [];
   
-    nomes.reverse();
+    for (let i = 0; i < form.length - 1; i++) {
+      const nome = form.elements[i].value;
+      nomes.push(nome);
+    }
   
-    document.getElementById("nome1").value = nomes[0];
-    document.getElementById("nome2").value = nomes[1];
-    document.getElementById("nome3").value = nomes[2];
-    document.getElementById("nome4").value = nomes[3];
-    document.getElementById("nome5").value = nomes[4];
+    const nomesInvertidos = nomes.reverse();
+  
+    for (let i = 0; i < form.length - 1; i++) {
+      form.elements[i].value = nomesInvertidos[i];
+    }
+  
+    const divNomesInvertidos = document.getElementById('nomesInvertidos');
+    divNomesInvertidos.innerHTML = nomesInvertidos.join(', ');
   }
-  
-  document.getElementById("inverterButton").addEventListener("click", inverterNomes);
-  
